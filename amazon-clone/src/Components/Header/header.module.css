@@ -1,7 +1,3 @@
-* {
-	padding: 0;
-	margin: 0;
-}
 .header_container {
 	background-color: #036544;
 	display: flex;
@@ -17,7 +13,7 @@
 	max-width: 250px;
 }
 .logo_container img {
-	width: 80px;
+	width: 70%;
 	padding-top: 5px;
 	margin-left: 20px;
 	vertical-align: middle;
@@ -25,7 +21,8 @@
 .delivery {
 	display: flex;
 	justify-content: center;
-	gap: 3px;
+	align-items: center;
+	gap: 5px;
 	font-weight: bold;
 	padding: 5px;
 }
@@ -49,7 +46,6 @@
 }
 .search select {
 	border: none;
-	height: 20%;
 }
 .search input {
 	border: 1px solid white;
@@ -96,7 +92,7 @@
 	font-weight: bold;
 }
 .language img {
-	width: 20%;
+	width: 40%;
 }
 .cart {
 	position: relative;
@@ -104,7 +100,7 @@
 .cart span {
 	position: absolute;
 	font-weight: bold;
-	top: -6px;
+	top: -4px;
 	font-size: 15px;
 	background-color: transparent;
 	left: 14px;
@@ -115,8 +111,8 @@
 .delivery:hover,
 .lower_container ul li:hover {
 	border: 1px solid white;
-	height: 60px;
-	box-sizing: border-box;
+	/* height: 60px;
+	box-sizing: border-box; */
 	border-radius: 3px;
 }
 .lower_container {
