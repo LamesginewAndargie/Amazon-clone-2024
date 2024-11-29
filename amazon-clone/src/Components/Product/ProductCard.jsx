@@ -11,7 +11,7 @@ function ProductCard({ product }) {
 				<img src={image} alt="" />
 			</a>
 			<div>
-				<h3>{title}</h3>
+				<h4>{title}</h4>
 				<div className={classes.rating}>
 					{/* rating */}
 					<Rating value={rating?.rate} precision={0.1} />
