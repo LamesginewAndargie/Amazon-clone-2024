@@ -6,7 +6,7 @@ import axios from "axios";
 import { productUrl } from "../../Api/endPoints";
 import ProductCard from "../../Components/Product/ProductCard";
 function Results() {
-	const [results, setResults] = useState([]);
+	const [products, setProducts] = useState([]);
 	const { categoryName } = useParams();
 	// console.log(categoryName);
 	useEffect(() => {
@@ -14,7 +14,7 @@ function Results() {
 			.get(`${productUrl}/products/category/${categoryName}`)
 			.then((res) => {
 				// console.log(res.data);
-				setResults(res.data);
+				setProducts(res.data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -28,7 +28,7 @@ function Results() {
 				<p style={{ padding: "30px" }}>Category/{categoryName}</p>
 				<hr />
 				<div className={classes.products_container}>
-					{results?.map((product) => (
+					{products?.map((product) => (
 						<ProductCard key={product.id} product={product} />
 					))}
 				</div>
