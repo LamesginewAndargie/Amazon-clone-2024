@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
 function Header() {
 	const [{ basket }, dispatch] = useContext(DataContext);
-	console.log(basket.length);
+	// console.log(basket.length);
 	return (
 		<section className={classes.fixed}>
 			<section>

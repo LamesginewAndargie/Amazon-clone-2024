@@ -8,7 +8,7 @@ import ProductCard from "../../Components/Product/ProductCard";
 import Loader from "../../Components/Loader/Loader";
 function ProductDetail() {
 	const { productId } = useParams();
-	console.log(productId);
+	// console.log(productId);
 	const [product, setProduct] = useState({});
 	const [isLoading, setIsLoading] = useState(false);
 	useEffect(() => {
@@ -30,7 +30,12 @@ function ProductDetail() {
 			{isLoading ? (
 				<Loader />
 			) : (
-				<ProductCard product={product} flex={true} renderDesc={true} />
+				<ProductCard
+					product={product}
+					flex={true}
+					renderDesc={true}
+					renderAdd={true}
+				/>
 			)}
 		</Layout>
 	);
