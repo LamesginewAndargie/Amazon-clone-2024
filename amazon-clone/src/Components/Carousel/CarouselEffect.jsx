@@ -7,13 +7,14 @@ function CarouselEffect() {
 	return (
 		<div>
 			<Carousel
-				autoplay={true}
+				autoPlay={true}
 				infiniteLoop={true}
-				// interval={2000}
-				// transitionTime={500}
+				interval={2000}
+				transitionTime={500}
 				showIndicators={false}
 				showThumbs={false}
-				autoFocus={true}
+				showStatus={false}
+				// autoFocus={true}
 			>
 				{img.map((imageItemLink, i) => {
 					return <img key={i} src={imageItemLink} />;

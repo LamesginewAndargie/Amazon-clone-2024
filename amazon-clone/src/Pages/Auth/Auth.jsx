@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./signup.module.css";
-import Layout from "../../Components/Layout/Layout";
 function Auth() {
 	return (
-		<Layout>
-			<div>Signup</div>
-		</Layout>
+		<section>
+			{/* logo */}
+			https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png
+		</section>
 	);
 }
 

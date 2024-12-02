@@ -27,7 +27,6 @@ function Cart() {
 			id,
 		});
 	};
-
 	return (
 		<Layout>
 			<section className={classes.container}>
@@ -40,9 +39,8 @@ function Cart() {
 					) : (
 						basket?.map((item, i) => {
 							return (
-								<section className={classes.cart_product}>
+								<section key={item.id} className={classes.cart_product}>
 									<ProductCard
-										key={i}
 										product={item}
 										renderDesc={true}
 										flex={true}

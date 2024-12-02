@@ -5,9 +5,9 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .category img {
-	width: 70%;
+	width: 90%;
 	object-fit: contain;
-	max-height: 200px;
+	height: 200px;
 	padding: 0px 10px;
 }
 .category a {
