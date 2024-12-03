@@ -2,21 +2,12 @@ import { useReducer } from "react";
 import { Type } from "./action.type";
 export const initialState = {
 	basket: [],
+	user: null,
 };
 // const [state, dispatch] = useReducer(reducer, initialState);
 export const reducer = (state, action) => {
 	switch (action.type) {
 		case Type.ADD_TO_BASKET:
-			// 	return {
-			// 		...state,
-			// 		basket: [...state.basket, action.item],
-			// 	};
-
-			// 	break;
-
-			// default:
-			// 	return state;
-			//check if the item exists
 			const existingItem = state.basket.find(
 				(item) => item.id === action.item.id
 			);
@@ -53,6 +44,11 @@ export const reducer = (state, action) => {
 			return {
 				...state,
 				basket: newBasket,
+			};
+		case Type.SET_USER:
+			return {
+				...state,
+				user: action.user,
 			};
 		default:
 			return state;
