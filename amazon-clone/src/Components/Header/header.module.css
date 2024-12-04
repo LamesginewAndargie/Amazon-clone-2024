@@ -62,8 +62,8 @@
 	margin-right: -2px;
 }
 .search svg {
-	width: 20px;
-	height: 25px;
+	width: 30px;
+	/* height: 30px; */
 	padding: 7px;
 	background: #7f1153;
 	color: white;

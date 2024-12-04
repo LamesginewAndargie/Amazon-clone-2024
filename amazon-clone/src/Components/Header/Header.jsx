@@ -7,8 +7,9 @@ import classes from "./header.module.css";
 import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 function Header() {
-	const [{ basket }, dispatch] = useContext(DataContext);
+	const [{ user, basket }, dispatch] = useContext(DataContext);
 	// console.log(basket.length);
 	const totalItem = basket.reduce((amount, item) => {
 		return item.amount + amount;
@@ -42,7 +43,7 @@ function Header() {
 							<option value="">All</option>
 						</select>
 						<input type="text" name="" id="" placeholder="Search Amazon" />
-						<FaSearch size={25} />
+						<FaSearch size={38} />
 					</div>
 					{/* right side link */}
 					<div className={classes.order_container}>
@@ -56,10 +57,19 @@ function Header() {
 							</select>
 						</Link>
 						{/* three components */}
-						<Link to="/auth">
+						<Link to={!user && "/auth"}>
 							<div>
-								<p>Hello, sign in</p>
-								<span>Account & Lists</span>
+								{user ? (
+									<>
+										<p>Hello, {user?.email?.split("@")[0]}</p>
+										<span onClick={()=>auth.signOut()}>Sign Out</span>
+									</>
+								) : (
+									<>
+										<p>Hello, sign in</p>
+										<span>Account & Lists</span>
+									</>
+								)}
 							</div>
 						</Link>
 						{/* orders */}
