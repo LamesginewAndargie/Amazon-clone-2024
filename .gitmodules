@@ -1,0 +1,3 @@
+[submodule "amazon-clone/amazon-clone/amazon-clone-api"]
+	path = amazon-clone/amazon-clone/amazon-clone-api
+	url = https://github.com/LamesginewAndargie/amazon-api-deploy.git
